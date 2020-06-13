@@ -25,9 +25,9 @@
 			}
 
 		// Prevent scrolling on touch.
-			window.ontouchmove = function() {
-				return true;
-			}
+			//window.ontouchmove = function() {
+			//	return true;
+			//}
 
 		// Fix scroll position on orientation change.
 			window.onorientationchange = function() {
