@@ -253,6 +253,18 @@ input, select, textarea {
 		-webkit-transform: scale(2.00); /* Safari and Chrome */
 	}	
 	
+	.img_large:hover{
+		color: #424242; 
+		-webkit-transition: all .3s ease-in;
+		-moz-transition: all .3s ease-in;
+		-ms-transition: all .3s ease-in;
+		-o-transition: all .3s ease-in;
+		transition: all .3s ease-in;
+		opacity: 1;
+		transform: scale(3.00);
+		-ms-transform: scale(3.00); /* IE 9 */
+		-webkit-transform: scale(3.00); /* Safari and Chrome */
+	}	
 /* Container */
 
 	.container {

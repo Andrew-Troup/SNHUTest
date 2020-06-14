@@ -4,10 +4,10 @@
 		<title>Designs</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="Sub_Pages/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="Sub_Pages/assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="Sub_Pages/is-preload">
+	<body class="is-preload">
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
@@ -30,10 +30,10 @@
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<ul class="major-icons">
-									<li><span class="image fit"><img src="Sub_Pages/images/design/Software_Design.png" alt="" class="img"/></span></li>
-									<li><span class="image fit"><img src="Sub_Pages/images/design/Software_Design_1.png" alt="" class="img"/></span></li>
-									<li><span class="image fit"><img src="Sub_Pages/images/design/Software_Design_2.png" alt="" class="img"/></span></li>
-									<li><span class="image fit"><img src="Sub_Pages/images/design/Software_Design_3.png" alt="" class="img"/></span></li>
+									<li><span class="image fit"><img src="images/design/Software_Design.png" alt="" class="img"/></span></li>
+									<li><span class="image fit"><img src="images/design/Software_Design_1.png" alt="" class="img"/></span></li>
+									<li><span class="image fit"><img src="images/design/Software_Design_2.png" alt="" class="img"/></span></li>
+									<li><span class="image fit"><img src="images/design/Software_Design_3.png" alt="" class="img"/></span></li>
 							</ul>
 						</div>
 						<div class="col-6 col-12-medium">
@@ -41,9 +41,10 @@
 								<h2>Project Layout and Design<br />
 								How I structure my projects using MVVM</h2>
 							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+							<p>MVVM stands for Model View View-Model. This structure decouples the view and the model to prevent excessess within either the view or the model. Allowing the View-Model to perform the majority of the work.</p>
+							<p>I broke the solution into 3 projects Common, Core Application, and Database Communications. The purpose of Common is to provide both Database Communications and Core Application with classes that both can use. Core Application is the majority of the solution, it contains everything pertaining to the UI. Finally, Database Communications contains all classes that pertian to communicating with the database.</p>
+							<p>By following MVVM it is easy to form a file structure that is similar. Inside of Core Application we can see it best. The ModelHandlers folder contains the majority of the View-Models; same as, Models or User Interfaces. Then in each primary folder I created sub-folders; for instance, Models' Records contains Admin, Class, and Student. These sub-folders contain Model classes that pertain purely to the classes directory.</p>
+							<p>The final thing I want to note about my project structure is the extraneous folder; for an example, Base or Support. Inside of the base Base folder it contains only inherited classes. Every Base folder in my project will only contain classes that are inherited from. Inside of Support you will find classes that assist the containing support folder. For instance, I have a class called ClassesBeingTaught, this is a Model class that supports AdminRecord. (look at the class diagram below for more information)</p>
 						</div>
 					</div>
 				</div>
@@ -63,7 +64,7 @@
 							<p>Region 3 is in the middle, it is how my UI handles the administrative views. The information being stored in the Administrative model classes would be information like admin's personal information and classes they are teaching. </p>							
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="Sub_Pages/images/design/Class_Diagram.jpg" alt="" class="img"/></span>
+							<span class="image fit"><img src="images/design/Class_Diagram.jpg" alt="" class="img_large"/></span>
 						</div>
 							
 					</div>
@@ -82,7 +83,7 @@
 							<p></p>							
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="Sub_Pages/images/design/User_Interface_Diagram.png" alt="" class="img"/></span>
+							<span class="image fit"><img src="images/design/User_Interface_Diagram.png" alt="" class="img"/></span>
 						</div>
 					</div>
 				</div>
@@ -97,7 +98,7 @@
 					<p>Previous will take you back to my Main Page<br />
 					Next will take you to Algorithms</p>
 					<ul class="actions special">						
-						<li><a href="index.html" class="button wide">Previous</a></li>
+						<li><a href="../index.html" class="button wide">Previous</a></li>
 						<li><a href="Algorithms.html" class="button wide primary">Next</a></li>
 					</ul>
 				</div>
