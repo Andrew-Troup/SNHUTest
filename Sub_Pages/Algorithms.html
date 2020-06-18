@@ -12,22 +12,23 @@
 			<section id="header">
 				<div class="inner">
 					<span class="icon solid major fa-cloud"></span>
-					<h1><strong>Software Designs and Engineering</strong><br /></h1>
-					<p>A collection of diagrams and narratives about the<br />
-					for my Capstone project.</p>
+					<h1><strong>Algorithms and Data Structures</strong><br /></h1>
+					<p>Narrative and information about algorithms <br />
+					and data structures in my Capstone project.</p>
 					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Software Design</a></li>	
-						<li><a href="#two" class="button scrolly">Class Diagram</a></li>						
-						<li><a href="#three" class="button scrolly">UI Diagrams</a></li>
+						<li><a href="#one" class="button scrolly">Narrative</a></li>	
+						<li><a href="#two" class="button scrolly">Database Com.</a></li>						
+						<li><a href="#three" class="button scrolly">Query Database</a></li>
 										
 					</ul>
 				</div>
 			</section>
 
 		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
+		<section id="one" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium">
 						<ul class="major-icons">
 								<li><span class="icon solid style1 major fa-code"></span></li>
 								<li><span class="icon solid style2 major fa-bolt"></span></li>
@@ -39,12 +40,12 @@
 						</div>
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
+								<h2>Narrative about Algorithms<br />
+								and Data structures</h2>
 							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+							<p>After I designed most of my capstone project, I set out to implement the algorithms and data structures I designed. Therefore, all the algorithms and data structures included in my capstone project were added from week one to week 6 of the course. </p>
+							<p>While I was designing the code, I wanted to give myself some challenges that exceeded the original requirements. Some ideas that would challenge me and be fun to accomplish. The first was the UI design, the UI design is not complex, but my knowledge of C# WPF is rusty, and this strained my capabilities. The second challenge was querying the student database based upon the Admin desires.</p>
+							<p>While I was developing these I was constantly having to re-adjust the designs to meet my abilities, or to meet the reality of WPF. For instance, I changed how I was going to query the student database because I was uncertain during the design phase of how I was going to build my database.</p>
 						</div>
 					</div>
 				</div>
@@ -56,17 +57,18 @@
 					<div class="row gtr-150">					
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Class Diagram <br />
-								The Three Regions</h2>
+								<h2>Data Structure: How My UI Communicates<br />
+								 Updates To My Database</h2>
 							</header>
-							<p>Region 1, at the top, is the class and course record handlers and model views. In these classes we are handling the information being stored locally; as well as, the how the infromation is going to be displayed.</p>
-							<p>Region 2 which contains all of the student information. Such as personal information or class history. In this both the student and teacher can view the </p>
-							<p>Region 3 is in the middle, it is how my UI handles the administrative views. The information being stored in the Administrative model classes would be information like admin's personal information and classes they are teaching. </p>							
+							<p>When a student is selected in the AdminStudentTreeView (first image), it is loaded into the StudentRecordLayout. Since the user is an Admin, they have the privilege to edit all information pertaining to the student (Personal and Academic). Before an Admin can edit the information though, they will have to hit the Edit button. This will enable all the text boxes pertaining to the region they want to edit.</p>
+							<p>While the information is being edited by the Admin, the changed values and the effected rows are being stored into a queue in the format { row_name : new_value } (second image). As the admin edits the different rows the information is being queued up. When the admin completes editing the desired information, they toggle the edit button. This is when all the changes are written to the database.</p>
+							<p>The third image is the code that will update the student’s record in the database. It will iterate through each item that was changed by the user and update the database given the current student ID.</p>							
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="Sub_Pages/images/design/Class_Diagram.jpg" alt="" class="img"/></span>
+							<span class="image fit"><img src="Sub_Pages/images/Algorithms/Update_Database.png" alt="" class="img"/></span>
+							<span class="image fit"><img src="Sub_Pages/images/Algorithms/Update_Database_2.png" alt="" class="img"/></span>
+							<span class="image fit"><img src="Sub_Pages/images/Algorithms/Update_Database_3.png" alt="" class="img"/></span>
 						</div>
-							
 					</div>
 				</div>
 			</section>
@@ -75,15 +77,18 @@
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<div class="row gtr-150">
+						<div class="col-6 col-12-medium imp-medium">
+							<span class="image fit"><img src="Sub_Pages/images/Algorithms/Query_Student.png" alt="" class="img"/></span>
+							<span class="image fit"><img src="Sub_Pages/images/Algorithms/Query_Student_2.png" alt="" class="img"/></span>
+						</div>
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Class Diagram <br />
-								The Three Regions</h2>
+								<h2>Algorithm: How I Query<br />
+								Students Collection</h2>
 							</header>
-												
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="" alt="" class="img"/></span>
+							<p>The only time that an individual can query the student collection is if they are an admin. As an admin, they have the privilege to query the student’s collection and they can do so by clicking a button. When they do click the query student’s button a UI will appear.</p>
+							<p>The way that the UI query works is by following the format of all queries in MongoDB: { row_name : Value }. At the end of each row the user can append an operator to it, either and / or. One last things to note about the UI is the bracers in the row. Combined rows are surrounded by another pair of bracers, like rows one and two. </p>
+							<p>With the how to out of the way, I want to talk about some of the logic behind the query student collection UI after the user completes the query they want to perform. After the user clicks Apply, my code will perform ComposeFilter. In this function I am parsing the information from the UI and composing the filter I will use to search the database. The information is then concatenated into filter, which is a MongoDB data structure, based upon the parsing.</p>							
 						</div>
 					</div>
 				</div>
