@@ -12,14 +12,14 @@
 			<section id="header">
 				<div class="inner">
 					<span class="icon solid major fa-cloud"></span>
-					<h1><strong>Software Designs and Engineering</strong><br /></h1>
-					<p>A collection of diagrams and narratives about the<br />
-					for my Capstone project.</p>
+					<h1><strong>Database</strong><br /></h1>
+					<p>A narrative, design, and information about<br />
+					the database used in my Capstone project.</p>
 					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Software Design</a></li>	
-						<li><a href="#two" class="button scrolly">Class Diagram</a></li>						
-						<li><a href="#three" class="button scrolly">UI Diagrams</a></li>
-										
+						<li><a href="#one" class="button scrolly">Narrative</a></li>	
+						<li><a href="#two" class="button scrolly">Student</a></li>						
+						<li><a href="#three" class="button scrolly">Admin</a></li>
+						<li><a href="#four" class="button scrolly">Class</a></li>		
 					</ul>
 				</div>
 			</section>
@@ -28,23 +28,19 @@
 			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
-						<ul class="major-icons">
-								<li><span class="icon solid style1 major fa-code"></span></li>
-								<li><span class="icon solid style2 major fa-bolt"></span></li>
-								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
-								<li><span class="icon solid style4 major fa-cog"></span></li>
-								<li><span class="icon solid style5 major fa-desktop"></span></li>
-								<li><span class="icon solid style6 major fa-calendar"></span></li>
+						<div class="col-6 col-12-medium">
+							<ul class="major">							
+								<span class="image fit"><img src="./images/Database/Narrative.PNG" alt=""/></span>
 							</ul>
 						</div>
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
+								<h2>Narrative about the database<br />
+								in my capstone project</h2>
 							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+							<p>The inclusion of the database was one of the primary steps I took while developing and designing my capstone project. The design changed throughout the development due necessities by the UI. For instance, I had to add another array for registered classes to the student’s record collection because I forgot about the register student functionality. But other than the slight changes over time I started designing and developing the database from week one to week six.</p>
+							<p>The reason to add this into my capstone project is the need to store student, class, admin, etc. information somewhere. The information just seemed best to be stored in a database. Since this is my first time developing a database from beginning to end, I think this portion of the capstone project shows my ability to adapt. I have implemented and even designed my own databases, but prior to this had not done both.</p>
+							<p>After I completed the development and design of the database, I have a good understanding of how important it is to properly organize and structure a database. I found in the early days I had a poorly managed database and ti was lacking in multiple ways, but then I forced myself to do a complete redesign of the database and that cleaned up a lot of my issues.</p>
 						</div>
 					</div>
 				</div>
@@ -56,15 +52,15 @@
 					<div class="row gtr-150">					
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Class Diagram <br />
-								The Three Regions</h2>
+								<h2>Design</h2>
 							</header>
-							<p>Region 1, at the top, is the class and course record handlers and model views. In these classes we are handling the information being stored locally; as well as, the how the infromation is going to be displayed.</p>
-							<p>Region 2 which contains all of the student information. Such as personal information or class history. In this both the student and teacher can view the </p>
-							<p>Region 3 is in the middle, it is how my UI handles the administrative views. The information being stored in the Administrative model classes would be information like admin's personal information and classes they are teaching. </p>							
+							<p>I broke my database into 6 collections: Admins, Classes, Departments, Majors, Students, and Users. Admins, classes, and Students will be described more in-depth later.</p>
+							<p>The most important thing that I had to worry about when designing my database was the ability for my UI to interact with the database without much difficulties. I wanted query time to be limited to prevent UI freezing / stalling for information so I broke apart the information as much as I could.</p>
+							<p>A common theme that I implemented was the use of identifications for searching. I added in student ID, admin ID, and class ID to provide me with the ability to link the different collections. With giving each class an identification, I could easily link the current class a teacher is teaching without having to duplicate all the class information in the database.</p>
+							<p>Another common theme I took was to create sub documents in my collections. For instance, Student has a sub document of type AcademicInformation. The reason that I use sub documents is to allow for easier reading and extrapolation of data in the collection.</p>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="/images/design/Class_Diagram.jpg" alt="" class="img"/></span>
+							<span class="image fit"><img src="./images/Database/Design.PNG" alt="" class="img"/></span>
 						</div>
 							
 					</div>
@@ -72,40 +68,75 @@
 			</section>
 
 		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Class Diagram <br />
-								The Three Regions</h2>
-							</header>
-												
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="" alt="" class="img"/></span>
-						</div>
+		<section id="three" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium imp-medium">
+						<span class="image"><img src="./images/Database/Student_Collection.PNG" alt=""/></span>
+						<span class="image"><img src="./images/Database/Student_Collection_2.PNG" alt=""/></span>
+					</div>
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>Student Collection</h2>
+						</header>
+						<p>There were some requirements given in the previous class about the information stored in the student record, but I was given a lot of freedom in the execution. Some information I was required to have were student name, identification, and other personal information</p>
+						<p>The reason that I broke a student’s classes into three arrays is it allows me to move around classes when semesters are starting; as well as, maintaining the structure I still have when the switch occurs. When we move from semester A to semester B Enrolled classes become ClassesTaken and Registered classes become Enrolled. Each of the three arrays contains the same basic object: ClassName and grade (As you can see in the second image).</p>					
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 
 		<!-- Four -->
-			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Ready to move on?</h2>
-					</header>
-					<p>Previous will take you back to my Main Page<br />
-					Next will take you to Algorithms</p>
-					<ul class="actions special">						
-						<li><a href="Design.html" class="button wide">Previous</a></li>
-						<li><a href="Database.html" class="button wide primary">Next</a></li>
-					</ul>
+		<section id="four" class="main style2">
+			<div class="container">
+				<div class="row gtr-150">					
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>Admin Collection</h2>
+						</header>
+						<p>Inside of the Admin collection it contains personal information and the classes the Admin is currently teaching. The current classes that the admin is teaching is an array that contains multiple instances of CurrentClass. The teaching class array gives me the flexibility to assign multiple classes to each teacher without having to worry about another object container.</p>
+						<p>The CurrentClass object within the admin collection is most of the interesting characteristics of the admin objects. The reason for this is the linking done through the ClassID and the StudentID. A CurrentClass will contain a list of students who are currently enrolled in the course. This allows the Admin to edit a student’s information without having to query the database each time. The reason that it contains ClassID was to, in future iterations, allow for another collection, called Registered, where it would link student’s registration and the classes they registered for. Sadly, I could not get to that.</p>
+					</div>
+					<div class="col-6 col-12-medium imp-medium">
+						<span class="image fit"><img src="./images/Database/Admin.PNG" alt="" class="img"/></span>
+					</div>		
 				</div>
-			</section>
-
+			</div>
+		</section>
+		
 		<!-- Five -->
-
+		<section id="five" class="main style1">
+			<div class="container">
+				<div class="row gtr-150">
+					<div class="col-6 col-12-medium imp-medium">
+						<span class="image fit"><img src="./images/Database/Classes.PNG" alt=""/></span>
+						<span class="image fit"><img src="./images/Database/Classes_2.PNG" alt=""/></span>
+					</div>				
+					<div class="col-6 col-12-medium">
+						<header class="major">
+							<h2>Class Collection</h2>
+						</header>
+						<p>The final important collection is the Class collection. Inside of the class collection we will contain 2 types: Online and Face-To-Face classes. In Online classes it contains class Url, begin date, and end date. In Face-To-Face class object it contains classroom and class building; as well as, begin and end date. Both use the course information object.</p>
+						<p>The reason that both online and Face-To-Face contain being and end dates is because that is information pertaining explicitly to a class, whereas, course information could be applied to multiple classes. For instance, if we had a class being taught over multiple semesters. This is also why ClassID is contained within course, for future iterations I could allow for semester based storage and link the classes with the course information by the ClassID (Should have been named CourseID).</p>
+					</div>		
+				</div>
+			</div>
+		</section>
+		
+		<!-- Six -->
+		<section id="six" class="main style2 special">
+			<div class="container">
+				<header class="major">
+					<h2>Ready to move on?</h2>
+				</header>
+				<p>Previous will take you back to my Main Page<br />
+				Next will take you to Algorithms</p>
+				<ul class="actions special">						
+					<li><a href="Design.html" class="button wide">Previous</a></li>
+					<li><a href="Database.html" class="button wide primary">Next</a></li>
+				</ul>
+			</div>
+		</section>
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="copyright">
